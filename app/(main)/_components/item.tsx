@@ -42,9 +42,9 @@ const Item = ({
 
   // controllers
   const create = useMutation(api.documents.create);
-  const archive = useMutation(api.documents.archieve);
+  const archive = useMutation(api.documents.archive);
 
-  const onArchieve = (
+  const onArchive = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     event.stopPropagation()
@@ -54,7 +54,7 @@ const Item = ({
     toast.promise(promise, {
       loading: "Moving to trash...",
       success: "Note moved to trash!",
-      error: "Failed to archieve note."
+      error: "Failed to archive note."
     })
   }
   
@@ -94,7 +94,7 @@ const Item = ({
       {!!id && (
         <div
           role="button"
-          className="h-full rounded-sm hover:bg-neutral-300 dark:bg-neutral-600 mr-1"
+          className="h-full rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 mr-1"
           onClick={handleExpand}
         >
           <ChevronIcon className="h-4 w-4 shrink-0 text-muted-foreground/50"/>
@@ -136,7 +136,7 @@ const Item = ({
               side="right"
               forceMount
             >
-              <DropdownMenuItem onClick={onArchieve}>
+              <DropdownMenuItem onClick={onArchive}>
                 <Trash className="h-4 w-4 mr-2"/>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
