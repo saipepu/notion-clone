@@ -27,7 +27,7 @@ const UserItem = () => {
               <AvatarImage src={user?.imageUrl} />
             </Avatar>
             <span className="text-start font-medium line-clamp-1">
-              {user?.fullName}'s Jotion
+              {user?.fullName}&apos;s Jotion
             </span>
           </div>
           <div className="w-6 p-1 h-full flex items-center justify-center hover:bg-primary/5 rounded-sm">
@@ -52,7 +52,9 @@ const UserItem = () => {
               </Avatar>
             </div>
             <div className="space-y-1">
-              <p className="text-sm line-clamp-1">{user?.fullName}'s Jotion</p>
+              <p className="text-sm line-clamp-1">
+                {user?.fullName}&apos;s Jotion
+              </p>
             </div>
           </div>
         </div>
