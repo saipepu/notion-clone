@@ -6,7 +6,11 @@ Thanks to - <a href="https://codewithantonio.com" target="_blank">Antonio</a> fo
 
 ## Getting Started
 
-First, run the development server:
+Clone git & install packages
+<code>git clone [repo-url]</code>
+<code>npm install or yarn add</code>
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -16,4 +20,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+#and
+npx convex dev
 ```
